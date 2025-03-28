@@ -1,0 +1,41 @@
+:root{
+    --border-color: tomato;
+    --radius: 60px;
+    --part-1-color:black;
+}
+
+html,body{
+    backdrop-filter: blur(2rem);
+    background: linear-gradient(to right, white, #a6c1ee);
+}
+.part-1{
+    z-index: 10;
+    border-bottom-right-radius: var(--radius);
+    border-bottom: 5px solid  var(--border-color);
+    border-right:  5px solid   var(--border-color);
+    background-color: var(--part-1-color);
+}
+
+.content{
+    height: 500px;
+    color: white;
+    font-size: 50px;
+}
+
+.part-2{
+    justify-content: center;
+    width: 100%;
+}
+
+.mask-div{
+    z-index: 20;
+    background-color: transparent;
+    border-top: 5px solid  var(--border-color);
+    border-left: 5px solid  var(--border-color);
+    border-top-left-radius: var(--radius);
+    width: 100%;
+    height: var(--radius);
+    inset: 0% auto 0% 50%;
+    transform: translate(-5.2px);
+    box-shadow: -20px -20px 0 20px var(--part-1-color);
+}
